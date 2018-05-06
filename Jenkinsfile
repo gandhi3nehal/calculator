@@ -40,8 +40,13 @@ agent any
 		}
 		stage("Docker build") {
 			steps {
-				sh "docker build -t gandhi3nehal/calculator ."
+				sh "sudo docker build -t gandhi3nehal/calculator ."
 			}
-		}		
+		}
+		stage("Docker push") {
+			steps {
+				sh	"sudo docker push gandhi3nehal/calculator"
+			}
+		}				
 	}
 }
