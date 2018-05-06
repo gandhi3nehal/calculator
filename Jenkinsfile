@@ -32,6 +32,16 @@ agent any
 				reportName: "Checkstyle Report"
 				])		
 			}
-		}	
+		}
+		stage("Package") {
+			steps {
+				sh "./gradlew build"
+			}
+		}
+		stage("Docker build") {
+			steps {
+				sh "docker build -t gandhi3nehal/calculator ."
+			}
+		}		
 	}
 }
