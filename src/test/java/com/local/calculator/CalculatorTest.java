@@ -3,7 +3,9 @@ package com.local.calculator;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
+/**
+* Main Spring Application.
+*/
 public class CalculatorTest {
 	private Calculator calculator = new Calculator();
 	@Test
