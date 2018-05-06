@@ -1,11 +1,15 @@
 pipeline {
 agent any
-stages {
-stage("Compile") {
-steps {
-sh "./gradlew compileJava"
-}}s
-tage("Unit test") {
-steps {
-sh "./gradlew test"
-}}}
+	stages {
+		stage("Compile") {
+		steps {
+		sh "./gradlew compileJava"
+	}
+	}
+	stage("Unit test") {
+		steps {
+		sh "./gradlew test"
+		}
+	}
+}
+
