@@ -14,6 +14,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'jacoco'
 
 group = 'com.local'
 version = '0.0.1-SNAPSHOT'
@@ -23,6 +24,15 @@ repositories {
 	mavenCentral()
 }
 
+jacocoTestCoverageVerification {
+violationRules {
+rule {
+limit {
+minimum = 0.2
+}
+}
+}
+}
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
