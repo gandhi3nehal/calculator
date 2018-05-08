@@ -45,7 +45,7 @@ agent any
 		}
 		stage("Docker push") {
 			steps {
-				sh "docker push gandhi3nehal/calculator"
+				echo "docker push gandhi3nehal/calculator"
 			}
 		}
 		stage("Deploy to staging"){
