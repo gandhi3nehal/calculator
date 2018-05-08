@@ -50,8 +50,7 @@ agent any
 		}
 		stage("Acceptance test") {
 			steps {
-				sleep 60
-				sh "./acceptance_test.sh 8080"
+				sh "./acceptance_test.sh"
 			}
 		}
 	}
