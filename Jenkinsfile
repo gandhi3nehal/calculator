@@ -40,13 +40,19 @@ agent any
 		}
 		stage("Docker build") {
 			steps {
-				echo "docker build -t gandhi3nehal/calculator ."
+				// "docker build -t gandhi3nehal/calculator ."
 			}
 		}
 		stage("Docker push") {
 			steps {
-				echo	"docker push gandhi3nehal/calculator"
+				//	"docker push gandhi3nehal/calculator"
 			}
-		}				
+		}
+		stage("Acceptance test") {
+			steps {
+				sleep 60
+				sh "./acceptance_test.sh 8080"
+			}
+		}
 	}
 }
