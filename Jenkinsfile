@@ -40,12 +40,12 @@ agent any
 		}
 		stage("Docker build") {
 			steps {
-				// "docker build -t gandhi3nehal/calculator ."
+				echo "docker build -t gandhi3nehal/calculator ."
 			}
 		}
 		stage("Docker push") {
 			steps {
-				//	"docker push gandhi3nehal/calculator"
+				echo	"docker push gandhi3nehal/calculator"
 			}
 		}
 		stage("Acceptance test") {
